@@ -1,0 +1,3 @@
+Tests: ppx-once
+Depends: ocaml-nox, ocaml-findlib, @
+Restrictions: allow-stderr

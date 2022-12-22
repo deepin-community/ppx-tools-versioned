@@ -1,0 +1,40 @@
+ppx-tools-versioned (5.4.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Bump debhelper compat level to 13
+  * Bump Standards-Version to 4.5.0
+  * Add Rules-Requires-Root: no
+
+ -- Stéphane Glondu <glondu@debian.org>  Sat, 25 Jul 2020 07:58:18 +0200
+
+ppx-tools-versioned (5.2.3-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release
+  * Bump debhelper compat level to 12
+  * Bump Standards-Version to 4.4.0
+
+ -- Stéphane Glondu <glondu@debian.org>  Thu, 22 Aug 2019 04:38:25 +0200
+
+ppx-tools-versioned (5.2.1-2) unstable; urgency=high
+
+  * Team upload
+  * Force rebuild of all packages on buildds
+
+ -- Stéphane Glondu <glondu@debian.org>  Fri, 02 Aug 2019 10:23:41 +0200
+
+ppx-tools-versioned (5.2.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update d/rules regarding changes to dune.
+  * Bump Standards-Version to 4.3.0 (no changes).
+  * Fix autopkgtest.
+
+ -- Andy Li <andy@onthewings.net>  Wed, 26 Dec 2018 00:38:42 +0800
+
+ppx-tools-versioned (5.2-1) unstable; urgency=low
+
+  * Initial release. (Closes: #899238)
+
+ -- Andy Li <andy@onthewings.net>  Wed, 20 Jun 2018 11:13:02 +0800

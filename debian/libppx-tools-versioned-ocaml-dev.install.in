@@ -1,0 +1,10 @@
+@OCamlStdlibDir@/ppx_tools_versioned/{,**/}*dune*
+@OCamlStdlibDir@/ppx_tools_versioned/{,**/}*.cmi
+@OCamlStdlibDir@/ppx_tools_versioned/{,**/}*.cmt
+@OCamlStdlibDir@/ppx_tools_versioned/{,**/}*.cmti
+@OCamlStdlibDir@/ppx_tools_versioned/{,**/}*.ml
+@OCamlStdlibDir@/ppx_tools_versioned/{,**/}*.mli
+@OCamlStdlibDir@/ppx_tools_versioned/{,**/}*.exe
+OPT: @OCamlStdlibDir@/ppx_tools_versioned/{,**/}*.a
+OPT: @OCamlStdlibDir@/ppx_tools_versioned/{,**/}*.cmxa
+OPT: @OCamlStdlibDir@/ppx_tools_versioned/{,**/}*.cmx

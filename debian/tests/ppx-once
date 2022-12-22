@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+cd "$(dirname "$0")/../../example/ppx_once"
+
+if [ -x '/usr/bin/ocamlopt' ]
+then
+	make "FLAGS=-package ocaml-migrate-parsetree,ppx_tools_versioned.metaquot_405,ppx_tools_versioned"
+else
+	make ppx_once.cmo "FLAGS=-package ocaml-migrate-parsetree,ppx_tools_versioned.metaquot_405,ppx_tools_versioned"
+fi
+
+make clean
