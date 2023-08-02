@@ -1,2 +1,2 @@
-version=3
-https://github.com/ocaml-ppx/ppx_tools_versioned/releases .*/archive/(\d\S*)\.tar\.gz
+version=4
+https://github.com/ocaml-ppx/ppx_tools/releases .*ppx_tools-v?([\d\.+]+)\.tbz

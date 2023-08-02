@@ -1,2 +1,3 @@
-(lang dune 1.0)
-(name ppx_tools_versioned)
+(lang dune 1.6)
+(name ppx_tools)
+(version 6.6)

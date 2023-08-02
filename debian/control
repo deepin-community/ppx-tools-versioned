@@ -1,22 +1,22 @@
-Source: ppx-tools-versioned
+Source: ppx-tools
 Section: ocaml
 Priority: optional
 Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
-Uploaders: Andy Li <andy@onthewings.net>
-Standards-Version: 4.5.0
-Rules-Requires-Root: no
+Uploaders:
+ Stéphane Glondu <glondu@debian.org>
 Build-Depends:
  debhelper-compat (= 13),
- ocaml-nox,
+ ocaml-nox (>= 4.08),
  ocaml-dune,
- libmigrate-parsetree-ocaml-dev (>= 1.7.0),
- ocaml-findlib,
- dh-ocaml
-Homepage: https://github.com/ocaml-ppx/ppx_tools_versioned
-Vcs-Browser: https://salsa.debian.org/ocaml-team/ppx-tools-versioned
-Vcs-Git: https://salsa.debian.org/ocaml-team/ppx-tools-versioned.git
+ cppo,
+ dh-ocaml (>= 1.2)
+Standards-Version: 4.6.0
+Rules-Requires-Root: no
+Homepage: https://github.com/ocaml-ppx/ppx_tools
+Vcs-Browser: https://salsa.debian.org/ocaml-team/ppx-tools
+Vcs-Git: https://salsa.debian.org/ocaml-team/ppx-tools.git
 
-Package: libppx-tools-versioned-ocaml
+Package: libppx-tools-ocaml-dev
 Architecture: any
 Depends:
  ${shlibs:Depends},
@@ -25,10 +25,8 @@ Depends:
 Provides:
  ${ocaml:Provides}
 Recommends: ocaml-findlib
-Description: Tools for authors of OCaml syntactic tools (Runtime library)
- A variant of ppx-tools based on ocaml-migrate-parsetree.
- .
- It includes tools for authors of syntactic tools (such as
+Description: tools for authors of OCaml syntactic tools
+ This package includes tools for authors of syntactic tools (such as
  ppx rewriters):
   * ppx_metaquot: a ppx filter to help writing programs which
     manipulate the Parsetree, by allowing the programmer to use
@@ -43,60 +41,3 @@ Description: Tools for authors of OCaml syntactic tools (Runtime library)
     and dump the resulting internal Parsetree representation;
   * genlifter: generates a virtual "lifter" class for one or several
     OCaml type constructors.
-
-Package: libppx-tools-versioned-ocaml-dev
-Architecture: any
-Depends:
- ${shlibs:Depends},
- ${misc:Depends},
- ${ocaml:Depends}
-Provides:
- ${ocaml:Provides}
-Recommends: ocaml-findlib
-Description: Tools for authors of OCaml syntactic tools (Development package)
- A variant of ppx-tools based on ocaml-migrate-parsetree.
- .
- It includes tools for authors of syntactic tools (such as
- ppx rewriters):
-  * ppx_metaquot: a ppx filter to help writing programs which
-    manipulate the Parsetree, by allowing the programmer to use
-    concrete syntax for expressions creating Parsetree fragments and
-    patterns deconstructing Parsetree fragments;
-  * rewriter: a utility to help testing ppx rewriters that runs the
-    rewriter on user-provided code and returns the result;
-  * Ast_mapper_class: a generic mapper from Parsetree to Parsetree
-    implementing a deep identity copy, which can be customized with a
-    custom behavior for each syntactic category;
-  * dumpast: parses fragments of OCaml code (or entire source files)
-    and dump the resulting internal Parsetree representation;
-  * genlifter: generates a virtual "lifter" class for one or several
-    OCaml type constructors.
- .
- This package contains development files.
-
-Package: libppx-tools-versioned-ocaml-doc
-Section: doc
-Architecture: all
-Depends: ${misc:Depends}
-Enhances: libppx-tools-versioned-ocaml-dev
-Description: Documentation for ppx-tools-versioned
- A variant of ppx-tools based on ocaml-migrate-parsetree.
- .
- It includes tools for authors of syntactic tools (such as
- ppx rewriters):
-  * ppx_metaquot: a ppx filter to help writing programs which
-    manipulate the Parsetree, by allowing the programmer to use
-    concrete syntax for expressions creating Parsetree fragments and
-    patterns deconstructing Parsetree fragments;
-  * rewriter: a utility to help testing ppx rewriters that runs the
-    rewriter on user-provided code and returns the result;
-  * Ast_mapper_class: a generic mapper from Parsetree to Parsetree
-    implementing a deep identity copy, which can be customized with a
-    custom behavior for each syntactic category;
-  * dumpast: parses fragments of OCaml code (or entire source files)
-    and dump the resulting internal Parsetree representation;
-  * genlifter: generates a virtual "lifter" class for one or several
-    OCaml type constructors.
- .
- This package contains documentation for ppx-tools-versioned in html
- format.

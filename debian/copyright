@@ -1,20 +1,14 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: ppx_tools_versioned
-Upstream-Contact:
- Alain Frisch <alain.frisch@lexifi.com>
- Peter Zotov <whitequark@whitequark.org>
- Gabriel Radanne
-Source: https://github.com/ocaml-ppx/ppx_tools_versioned
 
 Files: *
-Copyright: Copyright (c) 2013 Alain Frisch and LexiFi
-License: Expat
+Copyright: © 2013 Alain Frisch and LexiFi
+License: MIT
 
-License: Expat
- The MIT License (MIT)
- .
- Copyright (c) 2013 Alain Frisch and LexiFi
- .
+Files: debian/*
+Copyright: © 2015 Stéphane Glondu <glondu@debian.org>
+License: MIT
+
+License: MIT
  Permission is hereby granted, free of charge, to any person obtaining a copy of
  this software and associated documentation files (the "Software"), to deal in
  the Software without restriction, including without limitation the rights to

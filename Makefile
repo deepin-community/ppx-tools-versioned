@@ -1,7 +1,14 @@
+#  This file is part of the ppx_tools package.  It is released
+#  under the terms of the MIT license (see LICENSE file).
+#  Copyright 2013  Alain Frisch and LexiFi
+
 INSTALL_ARGS := $(if $(PREFIX),--prefix $(PREFIX),)
 
-all:
+default:
 	dune build
+
+release:
+	dune build -p ppx_tools
 
 install:
 	dune install $(INSTALL_ARGS)
@@ -9,18 +16,8 @@ install:
 uninstall:
 	dune uninstall $(INSTALL_ARGS)
 
-reinstall: uninstall reinstall
-
-test:
-	dune runtest
-
-promote:
-	dune promote
-
 clean:
 	dune clean
 
 all-supported-ocaml-versions:
-	dune build @default @runtest --workspace dune-workspace.dev
-
-.PHONY: all-supported-ocaml-versions all install uninstall reinstall test clean
+	dune build @install @runtest --workspace dune-workspace.dev
